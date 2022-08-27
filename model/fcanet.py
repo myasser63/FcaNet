@@ -16,7 +16,7 @@ class FcaBottleneck(nn.Module):
         super(FcaBottleneck, self).__init__()
         # assert fea_h is not None
         # assert fea_w is not None
-        c2wh = dict([(64,56), (128,28), (256,14) ,(512,7)])
+        c2wh = dict([(64,56), (128,28), (256,14) ,(512,7)]) #FILTERS, OUTPUT SIZE
         self.planes = planes
         self.conv1 = nn.Conv2d(inplanes, planes, kernel_size=1, bias=False)
         self.bn1 = nn.BatchNorm2d(planes)
